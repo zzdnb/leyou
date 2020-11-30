@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: item-service
+  datasource:
+    url: jdbc:mysql://123.56.29.191:3306/mybatis_plus
+    username: root
+    password: zzd..000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 10  #10秒钟不发就过期了
+    lease-renewal-interval-in-seconds: 5  # 5秒钟发送一次心跳
+mybatis:
+  type-aliases-package: com.leyou.item.pojo
